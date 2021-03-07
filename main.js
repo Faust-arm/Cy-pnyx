@@ -12,12 +12,12 @@ let levrairesulta = document.getElementById("vrairesulta").style.display = "none
 button.addEventListener('click', () =>{
     let nombre1 = Math.round(Math.random()*99);
     let nombre2 = Math.round(Math.random()*99);
-    document.getElementById('monresulta').value = '';
     document.getElementById("signe").value = addition;
     document.getElementById("n1").value = nombre1;
     document.getElementById("n2").value = nombre2;
     document.getElementById("vrairesulta").style.display = "none";
     document.getElementById("monresulta").style.backgroundColor = "white";
+    document.getElementById('monresulta').value = '';
     //document.getElementById("monresulta").style.
 })
     
