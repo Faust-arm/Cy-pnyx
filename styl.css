@@ -66,17 +66,7 @@ main{
 border-radius: 7em;
 }
 
-#leboutton{
-   background-color: rgb(6, 141, 141);
-   font-family: Arial, Helvetica, sans-serif;
-   color: white;
-   font-size: large;
-   margin-left: 20px;
-   border-radius: 7em;
-   width: 85px;
-   height: 35px;
-   text-align: center;
-}
+
 
 .egal{
    font-size: 1.9em;
@@ -176,12 +166,7 @@ justify-content: center;
             justify-content: center;
                }         
 
-#leboutton{
-   margin-left: 0;
-   margin-right: 18px;
-   margin-top: 30px;
-   text-align: center;
-}
+
 #commencer {
    background-color: rgb(6, 141, 141);
    font-family: Arial, Helvetica, sans-serif;

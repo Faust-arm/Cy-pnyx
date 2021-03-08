@@ -8,6 +8,29 @@ let sesmonresulta = document.getElementById("monresulta");
 let levrairesulta = document.getElementById("vrairesulta").style.display = "none";
 //getComputedStyle(levrairesulta).display == "none"
 
+
+
+
+//Capture des bouton html dans js
+let b1 = document.getElementById("b1");
+let b2 = document.getElementById("b2");
+let b3 = document.getElementById("b3");
+let b4 = document.getElementById("b4");
+let b5 = document.getElementById("b5");
+let b6 = document.getElementById("b6");
+let b7 = document.getElementById("b7");
+let b8 = document.getElementById("b8");
+let b9 = document.getElementById("b9");
+let effacer = document.getElementById("effacer");
+let suivant = document.getElementById("suivant");
+
+// Associer les boutons à l'input "monresulta"
+b1.addEventListener('click', () =>{
+    
+    
+})
+
+
 // generateur de nombres alléatoir sur les inputs n1 et n2 et addition de c'est nombres avec le boutton commencer.
 button.addEventListener('click', () =>{
     let nombre1 = Math.round(Math.random()*99);
@@ -18,7 +41,9 @@ button.addEventListener('click', () =>{
     document.getElementById("vrairesulta").style.display = "none";
     document.getElementById("monresulta").style.backgroundColor = "white";
     document.getElementById('monresulta').value = '';
+    document.getElementById("vrairesulta").value = '';
     //document.getElementById("monresulta").style.
+    
 })
     
 // solution du resulta par rapport à celui de l'utilisateur, green pour vrai, red pour faux.
@@ -36,14 +61,15 @@ sesmonresulta.addEventListener('change', (e) =>{
        // levrairesulta.style.backgroundColor = 'red';
     }
     if( parseInt(addi1) + parseInt(addi2) != recuperation ){
-        document.getElementById("monresulta").style.backgroundColor = "red"
+        document.getElementById("monresulta").style.backgroundColor = "red";
     }
-    else{ document.getElementById("vrairesulta").style.backgroundColor = "green" }
+    else{ document.getElementById("vrairesulta").style.backgroundColor = "green";
+    document.getElementById("vrairesulta").value = sommeaddi; }
 
 })
    
 // additions des nombres sur les inputs n1 et n2 avec résulta en appuiant sur le boutton resulte.
-let resulte = document.getElementById("leboutton");
+let resulte = document.getElementById("suivant");
 
 resulte.addEventListener('click', () =>{
     let addi1 = document.getElementById("n1").value ;
