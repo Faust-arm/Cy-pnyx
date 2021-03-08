@@ -11,23 +11,33 @@ body{
 }
 
 header{
-   background-color: rgba(50, 241, 241, 0.8);
+   background-color: rgb(6, 141, 141);
    width: 100%;
    text-align: center;
    margin: 0;
    padding: 0;
 }
+
+h1{
+   color: rgb(255, 255, 255);
+   font-family: Arial, Helvetica, sans-serif;
+}
+
 main{
    margin-top: 50px;
 }
 
 
 #commencer{
-   background-color: rgb(171, 219, 76);
+   background-color: rgb(6, 141, 141);
    margin-bottom: 35px;
    width: 175px;
    height: 35px;
    text-align: center;
+   border-radius: 7em;
+   font-family: Arial, Helvetica, sans-serif;
+   color: white;
+   font-size: large;
 }
 
 #signe, #n1, #n2{
@@ -36,7 +46,7 @@ main{
    text-align: center;
    margin-right: 20px;
    font-size: 1.7em;
-   
+   border-radius: 7%;
 }
 #vrairesulta{
    margin-right: 84px;
@@ -45,6 +55,7 @@ main{
    font-size: 1.7em;
    text-align: center;
    background-color: rgb(119, 250, 12);
+   border-radius: 7em;
 }
 
 #monresulta{
@@ -52,14 +63,17 @@ main{
    height:50px;
    font-size: 1.7em;
    text-align: center;
-
+border-radius: 7em;
 }
 
 #leboutton{
-   background-color: rgb(171, 219, 76);
+   background-color: rgb(6, 141, 141);
+   font-family: Arial, Helvetica, sans-serif;
+   color: white;
+   font-size: large;
    margin-left: 20px;
-   
-   width: 65px;
+   border-radius: 7em;
+   width: 85px;
    height: 35px;
    text-align: center;
 }
@@ -70,6 +84,43 @@ main{
    margin-right: 20px;
 }
 
+#b1,#b2,#b3,#b4,#b5{
+width: 45px;
+height: 45px;
+background-color: rgb(6, 141, 141);
+font-size: large;
+font-family: Arial, Helvetica, sans-serif;
+color: white;
+margin-right: 7px;
+margin-bottom: 20px;
+border-radius: 10%;
+}
+
+#b6,#b7,#b8,#b9{
+   width: 45px;
+   height: 45px;
+   background-color: rgb(6, 141, 141);
+   font-size: large;
+   font-family: Arial, Helvetica, sans-serif;
+   color: white;
+margin-right: 7px;
+margin-bottom: 20px;
+border-radius: 10%;
+   }
+   #effacer,#suivant{
+      width: 85px;
+   height: 35px;
+   background-color: rgb(6, 141, 141);
+   font-size: large;
+   font-family: Arial, Helvetica, sans-serif;
+   color: white;
+   margin-right: 7px;
+   border-radius: 10%;
+}
+.suiteffacebouton{
+   display: flex;
+   justify-content: center;
+}
 
 .container3{
    width: 100%;
@@ -92,8 +143,17 @@ main{
    flex-direction: row;
    justify-content: space-between;
 }
+
+.container5bouton2{
+   display: flex;
+   justify-content: center;
+}
+.containerbouton1{
+   margin-top: 30px;
+   margin-right: 10px;
+}
    
-@media screen and (max-width: 540px){
+@media screen and (max-width: 562px){
 
    .container3{
 display: flex;
@@ -123,7 +183,10 @@ justify-content: center;
    text-align: center;
 }
 #commencer {
-   background-color: rgb(171, 219, 76);
+   background-color: rgb(6, 141, 141);
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: large;
+   color: white;
    margin-bottom: 35px;
    width: 175px;
    height: 35px;
