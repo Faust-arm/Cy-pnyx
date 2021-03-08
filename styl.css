@@ -108,6 +108,14 @@ justify-content: center;
       justify-content: center;
          }
 
+         .container1{
+            margin-left: 10px;
+            display: flex;
+            
+            align-items: center;
+            justify-content: center;
+               }         
+
 #leboutton{
    margin-left: 0;
    margin-right: 18px;
@@ -120,7 +128,7 @@ justify-content: center;
    width: 175px;
    height: 35px;
    text-align: center;
-   margin-left: 18px;
+   margin-right: 20px;
 }
 #monresulta {
    width: 175px;
