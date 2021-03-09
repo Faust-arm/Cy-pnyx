@@ -9,6 +9,21 @@ let levrairesulta = document.getElementById("vrairesulta").style.display = "none
 let buttoneffacer = document.getElementById("effacer");
 //getComputedStyle(levrairesulta).display == "none"
 
+   let btcacher = document.getElementById("boutoncacher");
+   let divcacher = document.getElementsByClassName("diveffacerboutons")[0];
+
+   btcacher.addEventListener("click", () =>{
+       if(getComputedStyle(divcacher).display != "none"){
+           divcacher.style.display = "none";
+        btcacher.innerHTML ="Afficher le clavier";}
+           else{
+               divcacher.style.display = "block";
+               btcacher.innerHTML ="Enlever le clavier";
+           }
+   })
+
+
+
 let nombrebouton1 = Number(1); 
 
 
@@ -43,11 +58,12 @@ button.addEventListener('click', () =>{
     document.getElementById("monresulta").style.backgroundColor = "white";
     document.getElementById('monresulta').value = '';
     document.getElementById("vrairesulta").value = '';
+
     //document.getElementById("monresulta").style.
 })
 
 buttoneffacer.addEventListener('click', () =>{
-    
+    document.getElementById("monresulta").style.backgroundColor = "white";
     document.getElementById("monresulta").value = "";
     document.getElementById("vrairesulta").style.display = "none";
 }) 
@@ -80,6 +96,7 @@ resulte.addEventListener('click', () =>{
     let addi2 = document.getElementById("n2").value;
     let sommeaddi = parseInt(addi1) + parseInt(addi2);
     document.getElementById("vrairesulta").value = sommeaddi;
+    
 })
 
 

@@ -27,6 +27,15 @@ main{
    margin-top: 50px;
 }
 
+#boutoncacher{
+   width: 250px;
+   height: 23px;
+   background-color: rgba(162, 198, 230,0.7);
+   border-radius: 2em;
+   color: white;
+   font-size: large;
+   font-family: Arial, Helvetica, sans-serif;
+}
 
 #commencer{
    background-color: rgb(6, 141, 141);
@@ -138,9 +147,17 @@ border-radius: 10%;
    display: flex;
    justify-content: center;
 }
+
+.divduboutoncacher{
+   display: flex;
+   justify-content: center;
+   margin-bottom: 10px;
+}
+
 .containerbouton1{
-   margin-top: 30px;
+   margin-top: 20px;
    margin-right: 10px;
+   margin-bottom: 20px;
 }
    
 @media screen and (max-width: 562px){
