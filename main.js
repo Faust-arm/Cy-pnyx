@@ -15,7 +15,8 @@ let buttoneffacer = document.getElementById("effacer");
    btcacher.addEventListener("click", () =>{
        if(getComputedStyle(divcacher).display != "none"){
            divcacher.style.display = "none";
-        btcacher.innerHTML ="Afficher le clavier";}
+        btcacher.innerHTML ="Afficher le clavier";
+    }
            else{
                divcacher.style.display = "block";
                btcacher.innerHTML ="Enlever le clavier";
@@ -49,6 +50,7 @@ b1.value = nombrebouton1;
 
 // generateur de nombres alléatoir sur les inputs n1 et n2 et addition de c'est nombres avec le boutton commencer.
 button.addEventListener('click', () =>{
+    button.innerHTML = "Recommencer";
     let nombre1 = Math.round(Math.random()*99);
     let nombre2 = Math.round(Math.random()*99);
     document.getElementById("signe").value = addition;

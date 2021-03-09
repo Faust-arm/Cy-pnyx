@@ -13,6 +13,7 @@ body{
 header{
    background-color: rgb(6, 141, 141);
    width: 100%;
+   height: 80px;
    text-align: center;
    margin: 0;
    padding: 0;
@@ -23,13 +24,40 @@ h1{
    font-family: Arial, Helvetica, sans-serif;
 }
 
+.containerheadeur{
+   display: flex;
+   flex-direction: row-reverse;
+   justify-content: flex-end;
+}
+
+
 main{
    margin-top: 50px;
+}
+.containairebardemenu{
+   width: 36px;
+   height: 36px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+margin-left: 25px;
+z-index: 1;
+
+}
+
+.bar1, .bar2, .bar3{
+   width: 30px;
+   height: 5px;
+   border-radius: 8em;
+   background-color: aliceblue;
+   margin-top: 5px;
 }
 
 #boutoncacher{
    width: 250px;
-   height: 23px;
+   height: 27px;
+   
    background-color: rgba(162, 198, 230,0.7);
    border-radius: 2em;
    color: white;
@@ -102,7 +130,7 @@ border-radius: 10%;
    font-size: large;
    font-family: Arial, Helvetica, sans-serif;
    color: white;
-margin-right: 7px;
+margin-right: 11px;
 margin-bottom: 20px;
 border-radius: 10%;
    }
@@ -152,15 +180,46 @@ border-radius: 10%;
    display: flex;
    justify-content: center;
    margin-bottom: 10px;
+   margin-top: 20px;
+}
+
+.container1mode{
+  /* background-color: rgba(97, 73, 206,0.7);*/
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
 }
 
 .containerbouton1{
    margin-top: 20px;
    margin-right: 10px;
    margin-bottom: 20px;
+  
 }
    
 @media screen and (max-width: 562px){
+
+   main{
+      margin-top: 20px;
+   }
+
+   header{
+      background-color: rgb(6, 141, 141);
+      width: 100%;
+      height: 70px;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+   }
+
+
+   .divduboutoncacher{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+      margin-top: 5px;
+   }
 
    .container3{
 display: flex;
