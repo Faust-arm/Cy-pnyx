@@ -3,15 +3,32 @@ let multiplie = '*';
 let addition = '+'
 let associer = multiplie = signemultiplie;
 
-let button = document.getElementById("commencer"); 
+// Création des nombres.
+let nombrebouton0 = Number(0)
+let nombrebouton1 = Number(1); 
+let nombrebouton2 = Number(2); 
+let nombrebouton3 = Number(3); 
+let nombrebouton4 = Number(4); 
+let nombrebouton5 = Number(5); 
+let nombrebouton6 = Number(6); 
+let nombrebouton7 = Number(7);
+let nombrebouton8 = Number(9); 
+let nombrebouton9 = Number(8);  
+
+// Variable de recupération des inputs text
 let sesmonresulta = document.getElementById("monresulta");
 let levrairesulta = document.getElementById("vrairesulta").style.display = "none";
-let buttoneffacer = document.getElementById("effacer");
 //getComputedStyle(levrairesulta).display == "none"
 
+// Variable des boutons Commencer, effacer, boutoncacher, suivant.
+let button = document.getElementById("commencer"); 
+let buttoneffacer = document.getElementById("effacer");
+let resulte = document.getElementById("suivant");
    let btcacher = document.getElementById("boutoncacher");
    let divcacher = document.getElementsByClassName("diveffacerboutons")[0];
 
+
+// Bouton pour enlever et afficher le clavier
    btcacher.addEventListener("click", () =>{
        if(getComputedStyle(divcacher).display != "none"){
            divcacher.style.display = "none";
@@ -23,12 +40,8 @@ let buttoneffacer = document.getElementById("effacer");
            }
    })
 
-
-
-let nombrebouton1 = Number(1); 
-
-
 //Capture des bouton input des chiffres html dans js.
+let bz =document.getElementById("bz");
 let b1 =document.getElementById("b1");
 let b2 = document.getElementById("b2");
 let b3 = document.getElementById("b3");
@@ -41,12 +54,31 @@ let b9 = document.getElementById("b9");
 let effacer = document.getElementById("effacer");
 let suivant = document.getElementById("suivant");
 
+// Associer les valeurs au boutons.
+let tableauboutons = [
+    b1.value = nombrebouton1,
+     b2.value = nombrebouton2,
+     b3.value = nombrebouton3,
+     b4.value = nombrebouton4,
+     b5.value = nombrebouton5,
+     b6.value = nombrebouton6,
+     b7.value = nombrebouton7,
+     b8.value = nombrebouton8,
+     b9.value = nombrebouton9,
+     bz.value = nombrebouton0,];
+
+
 // Associer les boutons à l'input "monresulta"
-b1.addEventListener('click', () =>{
-b1.value = nombrebouton1;
-    let recuperationb1 = b1.value;
-    sesmonresulta.value = recuperationb1;
-})
+b1.addEventListener('click', () =>{ sesmonresulta.value += tableauboutons[0];})
+b2.addEventListener('click', () =>{ sesmonresulta.value += tableauboutons[1];})
+b3.addEventListener('click', () =>{ sesmonresulta.value += tableauboutons[2];})
+b4.addEventListener('click', () =>{ sesmonresulta.value += tableauboutons[3];})
+b5.addEventListener('click', () =>{ sesmonresulta.value += tableauboutons[4];})
+b6.addEventListener('click', () =>{ sesmonresulta.value += tableauboutons[5];})
+b7.addEventListener('click', () =>{ sesmonresulta.value += tableauboutons[6];})
+b8.addEventListener('click', () =>{ sesmonresulta.value += tableauboutons[7];})
+b9.addEventListener('click', () =>{ sesmonresulta.value += tableauboutons[8];})
+bz.addEventListener('click', () =>{ sesmonresulta.value += tableauboutons[9];})
 
 // generateur de nombres alléatoir sur les inputs n1 et n2 et addition de c'est nombres avec le boutton commencer.
 button.addEventListener('click', () =>{
@@ -60,8 +92,6 @@ button.addEventListener('click', () =>{
     document.getElementById("monresulta").style.backgroundColor = "white";
     document.getElementById('monresulta').value = '';
     document.getElementById("vrairesulta").value = '';
-
-    //document.getElementById("monresulta").style.
 })
 
 buttoneffacer.addEventListener('click', () =>{
@@ -90,9 +120,8 @@ sesmonresulta.addEventListener('change', (e) =>{
     else{ document.getElementById("vrairesulta").style.backgroundColor = "green";
      }
 })
-   // additions des nombres sur les inputs n1 et n2 avec résulta en appuiant sur le boutton resulte.
-let resulte = document.getElementById("suivant");
 
+// additions des nombres sur les inputs n1 et n2 avec résulta en appuiant sur le boutton resulte.
 resulte.addEventListener('click', () =>{
     let addi1 = document.getElementById("n1").value ;
     let addi2 = document.getElementById("n2").value;

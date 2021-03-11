@@ -22,12 +22,19 @@ header{
 h1{
    color: rgb(255, 255, 255);
    font-family: Arial, Helvetica, sans-serif;
+   margin-right: 50px;
+   width: 100%;
+   height: 30px;
+   text-align: center;
+   
 }
 
 .containerheadeur{
+   borde: solid black;
    display: flex;
-   flex-direction: row-reverse;
-   justify-content: flex-end;
+   justify-content: left;
+align-items: center;
+   
 }
 
 
@@ -36,28 +43,36 @@ main{
 }
 .containairebardemenu{
    width: 36px;
-   height: 36px;
+   height: 30px;
+   margin-top: 40px;
+   border  solid black;
    display: flex;
-   justify-content: center;
+   justify-content:space-around;
    align-items: center;
    flex-direction: column;
-margin-left: 25px;
+   margin-left: 15px;
 z-index: 1;
 
+}
+.divduboutoncacher{
+   display: flex;
+   justify-content: center;
+   margin-bottom: 0px;
+   margin-top: 0px;
 }
 
 .bar1, .bar2, .bar3{
    width: 30px;
-   height: 5px;
+   height: 4px;
    border-radius: 8em;
    background-color: aliceblue;
-   margin-top: 5px;
+   
 }
 
 #boutoncacher{
    width: 250px;
    height: 27px;
-   
+   margin-bottom: 20px;
    background-color: rgba(162, 198, 230,0.7);
    border-radius: 2em;
    color: white;
@@ -111,7 +126,7 @@ border-radius: 7em;
    margin-right: 20px;
 }
 
-#b1,#b2,#b3,#b4,#b5{
+#b1,#b2,#b3,#b4,#bz{
 width: 45px;
 height: 45px;
 background-color: rgb(6, 141, 141);
@@ -123,7 +138,7 @@ margin-bottom: 20px;
 border-radius: 10%;
 }
 
-#b6,#b7,#b8,#b9{
+#b6,#b7,#b8,#b9,#b5{
    width: 45px;
    height: 45px;
    background-color: rgb(6, 141, 141);
@@ -179,8 +194,8 @@ border-radius: 10%;
 .divduboutoncacher{
    display: flex;
    justify-content: center;
-   margin-bottom: 10px;
-   margin-top: 20px;
+   margin-bottom: 0px;
+   margin-top: 0px;
 }
 
 .container1mode{
@@ -198,7 +213,7 @@ border-radius: 10%;
   
 }
    
-@media screen and (max-width: 562px){
+@media screen and (max-width: 662px){
 
    main{
       margin-top: 20px;
@@ -207,19 +222,15 @@ border-radius: 10%;
    header{
       background-color: rgb(6, 141, 141);
       width: 100%;
-      height: 70px;
+      height: 80px;
       text-align: center;
       margin: 0;
       padding: 0;
    }
 
+   
 
-   .divduboutoncacher{
-      display: flex;
-      justify-content: center;
-      margin-bottom: 10px;
-      margin-top: 5px;
-   }
+
 
    .container3{
 display: flex;
@@ -270,4 +281,17 @@ justify-content: center;
    background-color: rgb(119, 250, 12);
    margin-bottom: 30px;
 }
+}
+@media screen and (max-width: 310px){
+   .containairebardemenu{
+      width: 36px;
+      height: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+   margin-left: 5px;
+   z-index: 1;
+   
+   }
 }
