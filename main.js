@@ -56,24 +56,12 @@ let suivant = document.getElementById("suivant");
 
 let boutons = [bz, b1, b2, b3, b4, b5, b6, b7, b8, b9];
 
-// Associer les valeurs au boutons.
-let tableauboutons = [
-    b1.value = nombrebouton1,
-     b2.value = nombrebouton2,
-     b3.value = nombrebouton3,
-     b4.value = nombrebouton4,
-     b5.value = nombrebouton5,
-     b6.value = nombrebouton6,
-     b7.value = nombrebouton7,
-     b8.value = nombrebouton8,
-     b9.value = nombrebouton9,
-     bz.value = nombrebouton0,];
-
 
 // Associer les boutons à l'input "monresulta"
  boutons.forEach(bouton => { 
 
-     bouton.addEventListener('click', () =>{ console.log(sesmonresulta, bouton.value); sesmonresulta.value += bouton.value; 
+     bouton.addEventListener('click', () =>{ 
+          sesmonresulta.value += bouton.value; 
      })
  })
 
