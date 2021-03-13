@@ -54,6 +54,8 @@ let b9 = document.getElementById("b9");
 let effacer = document.getElementById("effacer");
 let suivant = document.getElementById("suivant");
 
+let boutons = [bz, b1, b2, b3, b4, b5, b6, b7, b8, b9];
+
 // Associer les valeurs au boutons.
 let tableauboutons = [
     b1.value = nombrebouton1,
@@ -69,17 +71,14 @@ let tableauboutons = [
 
 
 // Associer les boutons à l'input "monresulta"
-b1.addEventListener('click', () =>{ sesmonresulta.value += tableauboutons[0];})
-b2.addEventListener('click', () =>{ sesmonresulta.value += tableauboutons[1];})
-b3.addEventListener('click', () =>{ sesmonresulta.value += tableauboutons[2];})
-b4.addEventListener('click', () =>{ sesmonresulta.value += tableauboutons[3];})
-b5.addEventListener('click', () =>{ sesmonresulta.value += tableauboutons[4];})
-b6.addEventListener('click', () =>{ sesmonresulta.value += tableauboutons[5];})
-b7.addEventListener('click', () =>{ sesmonresulta.value += tableauboutons[6];})
-b8.addEventListener('click', () =>{ sesmonresulta.value += tableauboutons[7];})
-b9.addEventListener('click', () =>{ sesmonresulta.value += tableauboutons[8];})
-bz.addEventListener('click', () =>{ sesmonresulta.value += tableauboutons[9];})
+ boutons.forEach(bouton => { 
 
+     bouton.addEventListener('click', () =>{ console.log(sesmonresulta, bouton.value); sesmonresulta.value += bouton.value; 
+     })
+ })
+
+
+  
 // generateur de nombres alléatoir sur les inputs n1 et n2 et addition de c'est nombres avec le boutton commencer.
 button.addEventListener('click', () =>{
     button.innerHTML = "Recommencer";
@@ -94,6 +93,7 @@ button.addEventListener('click', () =>{
     document.getElementById("vrairesulta").value = '';
 })
 
+// Bputon pour effacer le contenue de "monresulta" et display none à "vrairesulta".
 buttoneffacer.addEventListener('click', () =>{
     document.getElementById("monresulta").style.backgroundColor = "white";
     document.getElementById("monresulta").value = "";
@@ -105,16 +105,15 @@ sesmonresulta.addEventListener('change', (e) =>{
 
     let addi1 = document.getElementById("n1").value ;
     let addi2 = document.getElementById("n2").value;
-    let recuperation =  sesmonresulta = e.target.value;
-    if( parseInt(addi1) + parseInt(addi2) == recuperation ){  
-        document.getElementById("monresulta").style.backgroundColor = "green";
-    //levrairesulta.style.backgroundColor = 'green';
-}
+    let recuperation = e.target.value;
+    
+    if( parseInt(addi1) + parseInt(addi2) == recuperation){  
+ document.getElementById("monresulta").style.backgroundColor = "green";}
     else{  
         document.getElementById("vrairesulta").style.display = "block";
        // levrairesulta.style.backgroundColor = 'red';
     }
-    if( parseInt(addi1) + parseInt(addi2) != recuperation ){
+    if( parseInt(addi1) + parseInt(addi2) != recuperation  ){
         document.getElementById("monresulta").style.backgroundColor = "red";
     }
     else{ document.getElementById("vrairesulta").style.backgroundColor = "green";
@@ -123,11 +122,13 @@ sesmonresulta.addEventListener('change', (e) =>{
 
 // additions des nombres sur les inputs n1 et n2 avec résulta en appuiant sur le boutton resulte.
 resulte.addEventListener('click', () =>{
+    let evt = document.createEvent("HTMLEvents");
+     evt.initEvent("change", false, true);
+    document.getElementById('monresulta').dispatchEvent(evt);
     let addi1 = document.getElementById("n1").value ;
     let addi2 = document.getElementById("n2").value;
     let sommeaddi = parseInt(addi1) + parseInt(addi2);
     document.getElementById("vrairesulta").value = sommeaddi;
-    
 })
 
 

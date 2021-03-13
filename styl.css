@@ -44,7 +44,7 @@ main{
 .containairebardemenu{
    width: 36px;
    height: 30px;
-   margin-top: 40px;
+   margin-top: 7px;
    border  solid black;
    display: flex;
    justify-content:space-around;
