@@ -30,7 +30,7 @@ h1{
 }
 
 .containerheadeur{
-   borde: solid black;
+   
    display: flex;
    justify-content: left;
 align-items: center;
@@ -45,14 +45,12 @@ main{
    width: 36px;
    height: 30px;
    margin-top: 7px;
-   border  solid black;
    display: flex;
    justify-content:space-around;
    align-items: center;
    flex-direction: column;
    margin-left: 15px;
-z-index: 1;
-
+  
 }
 .divduboutoncacher{
    display: flex;
@@ -81,7 +79,7 @@ z-index: 1;
 }
 
 #commencer{
-   background-color: rgb(6, 141, 141);
+   background-color: rgb(241, 125, 58);
    margin-bottom: 35px;
    width: 175px;
    height: 35px;
@@ -129,10 +127,10 @@ border-radius: 7em;
 #b1,#b2,#b3,#b4,#bz{
 width: 45px;
 height: 45px;
-background-color: rgb(6, 141, 141);
-font-size: large;
+background-color: rgb(54, 207, 143);
+font-size: 1.4em;
 font-family: Arial, Helvetica, sans-serif;
-color: white;
+color: rgb(12, 12, 12);
 margin-right: 7px;
 margin-bottom: 20px;
 border-radius: 10%;
@@ -141,10 +139,10 @@ border-radius: 10%;
 #b6,#b7,#b8,#b9,#b5{
    width: 45px;
    height: 45px;
-   background-color: rgb(6, 141, 141);
-   font-size: large;
+   background-color: rgb(54, 207, 143);
+   font-size: 1.4em;
    font-family: Arial, Helvetica, sans-serif;
-   color: white;
+   color: rgb(12, 12, 12);
 margin-right: 11px;
 margin-bottom: 20px;
 border-radius: 10%;
@@ -152,10 +150,10 @@ border-radius: 10%;
    #effacer,#suivant{
       width: 85px;
    height: 35px;
-   background-color: rgb(6, 141, 141);
+   background-color: rgb(68, 117, 223);
    font-size: large;
    font-family: Arial, Helvetica, sans-serif;
-   color: white;
+   color: rgb(255, 255, 255);
    margin-right: 20px;
    border-radius: 10%;
 }
@@ -196,6 +194,7 @@ border-radius: 10%;
    justify-content: center;
    margin-bottom: 0px;
    margin-top: 0px;
+   margin-right: 7px;
 }
 
 .container1mode{
@@ -212,6 +211,55 @@ border-radius: 10%;
    margin-bottom: 20px;
   
 }
+
+.overlay {
+  
+   height: 80%;
+   width: 0;
+   position: fixed; 
+   z-index: 1; 
+   left: 0;
+   top: 0;
+
+   background-color: rgba(3, 43, 80, 0.9); 
+   overflow-x: hidden; 
+   transition: 0.5s; 
+}
+
+.overlay-content {
+   position: relative;
+   top: 30%; 
+   width: 100%;
+   text-align: center; 
+
+}
+
+
+.overlay span {
+   padding: 8px;
+   text-decoration: none;
+   font-size: 36px;
+   color: #818181;
+   display: block; 
+   transition: 0.3s; 
+}
+
+
+.overlay span:hover, .overlay span:focus {
+   color: #f1f1f1;
+}
+
+
+.overlay .closebtn {
+   position: absolute;
+   top: 20px;
+   right: 45px;
+   font-size: 60px;
+}
+
+
+
+
    
 @media screen and (max-width: 662px){
 
@@ -255,15 +303,16 @@ justify-content: center;
 
 
 #commencer {
-   background-color: rgb(6, 141, 141);
-   font-family: Arial, Helvetica, sans-serif;
-   font-size: large;
-   color: white;
+   background-color: rgb(241, 125, 58);
    margin-bottom: 35px;
+   margin-right: 15px;
    width: 175px;
    height: 35px;
    text-align: center;
-   margin-right: 20px;
+   border-radius: 7em;
+   font-family: Arial, Helvetica, sans-serif;
+   color: white;
+   font-size: large;
 }
 #monresulta {
    width: 175px;
@@ -291,7 +340,8 @@ justify-content: center;
       align-items: center;
       flex-direction: column;
    margin-left: 5px;
-   z-index: 1;
+   
+   
    
    }
 }
