@@ -3,18 +3,6 @@ let multiplie = '*';
 let addition = '+'
 let associer = multiplie = signemultiplie;
 
-// Création des nombres.
-let nombrebouton0 = Number(0)
-let nombrebouton1 = Number(1); 
-let nombrebouton2 = Number(2); 
-let nombrebouton3 = Number(3); 
-let nombrebouton4 = Number(4); 
-let nombrebouton5 = Number(5); 
-let nombrebouton6 = Number(6); 
-let nombrebouton7 = Number(7);
-let nombrebouton8 = Number(9); 
-let nombrebouton9 = Number(8);  
-
 // Variable de recupération des inputs text
 let sesmonresulta = document.getElementById("monresulta");
 let levrairesulta = document.getElementById("vrairesulta").style.display = "none";
@@ -66,9 +54,13 @@ let boutons = [bz, b1, b2, b3, b4, b5, b6, b7, b8, b9];
  })
 
 
+ 
+ 
   
-// generateur de nombres alléatoir sur les inputs n1 et n2 et addition de c'est nombres avec le boutton commencer.
-button.addEventListener('click', () =>{
+ // generateur de nombres alléatoir sur les inputs n1 et n2 et addition de c'est nombres avec le boutton commencer.
+ 
+
+ button.addEventListener('click', () =>{
     button.innerHTML = "Recommencer";
     let nombre1 = Math.round(Math.random()*99);
     let nombre2 = Math.round(Math.random()*99);
@@ -80,6 +72,9 @@ button.addEventListener('click', () =>{
     document.getElementById('monresulta').value = '';
     document.getElementById("vrairesulta").value = '';
 })
+
+
+  
 
 // Bputon pour effacer le contenue de "monresulta" et display none à "vrairesulta".
 buttoneffacer.addEventListener('click', () =>{
@@ -119,14 +114,20 @@ resulte.addEventListener('click', () =>{
     document.getElementById("vrairesulta").value = sommeaddi;
 })
 
-function openNav() {
+let menu = document.getElementsByClassName('containairebardemenu')[0];
+let fermermenu = document.getElementsByClassName('btfermer')[0];
+
+menu.addEventListener("click", () => {
+
     document.getElementById("myNav").style.width = "80%";
-   }
    
+})
    
-   function closeNav() {
-     document.getElementById("myNav").style.width = "0%";
-   }
+fermermenu.addEventListener("click", () => {
+
+    document.getElementById("myNav").style.width = "0%";
+   
+})
 
 
 
