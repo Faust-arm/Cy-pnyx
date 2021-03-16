@@ -103,22 +103,46 @@ main{
    font-size: large;
 }
 
-#signe, #n1, #n2{
+#n1, #n2{
    width: 50px;
    height:50px;
    text-align: center;
-   margin-right: 20px;
-   font-size: 1.7em;
+   margin-right: 10px;
    border-radius: 7%;
+   background-color: black;
+   font-size: 2.5em;
+   color: rgb(245, 237, 237);
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bolder;
+   border: solid black 2px;
 }
+#signe{
+   width: 20px;
+   height:20px;
+   text-align: center;
+   margin-right: 10px;
+   border-radius: 7%;
+   background-color: black;
+   font-size: 2.2em;
+   color: rgb(245, 237, 237);
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bolder;
+   border: solid black 2px;
+}
+
 #vrairesulta{
    margin-right: 84px;
    width: 175px;
    height:50px;
-   font-size: 1.7em;
    text-align: center;
-   background-color: rgb(119, 250, 12);
+   background-color: rgb(119, 250, 12,0.7);
    border-radius: 7em;
+   
+   font-size: 2em;
+color: rgb(245, 237, 237);
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bolder;
+border: solid rgba(54, 207, 143,0.1) 2px;
 }
 
 #monresulta{
@@ -127,6 +151,13 @@ main{
    font-size: 1.7em;
    text-align: center;
 border-radius: 7em;
+background-color: rgb(43, 44, 44);
+font-size: 2em;
+color: rgb(245, 237, 237);
+margin: 7px;
+font-weight: bolder;
+border: solid rgba(54, 207, 143,0.1) 2px;
+
 }
 
 
@@ -138,27 +169,33 @@ border-radius: 7em;
 }
 
 #b1,#b2,#b3,#b4,#bz{
-width: 45px;
-height: 45px;
-background-color: rgb(54, 207, 143);
-font-size: 1.4em;
-font-family: Arial, Helvetica, sans-serif;
-color: rgb(12, 12, 12);
-margin-right: 7px;
-margin-bottom: 20px;
+width: 70px;
+height: 70px;
 border-radius: 10%;
+margin: 7px;
+background-color: rgb(43, 44, 44);
+font-size: 1.8em;
+color: rgb(245, 237, 237);
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bolder;
+border: solid rgba(54, 207, 143,0.1) 2px;
 }
 
 #b6,#b7,#b8,#b9,#b5{
-   width: 45px;
-   height: 45px;
-   background-color: rgb(54, 207, 143);
-   font-size: 1.4em;
+   width: 70px;
+   height: 70px;
+   background-color: rgb(43, 44, 44);
+   font-size: 1.8em;
+   color: rgb(245, 237, 237);
    font-family: Arial, Helvetica, sans-serif;
-   color: rgb(12, 12, 12);
-margin-right: 11px;
-margin-bottom: 20px;
+  
+margin: 7px;
+font-weight: bolder;
 border-radius: 10%;
+border: solid rgba(54, 207, 143,0.1) 2px;
+   }
+   #divboutonzero{
+      text-align: center;
    }
    #effacer,#suivant{
       width: 85px;
@@ -166,13 +203,15 @@ border-radius: 10%;
    background-color: rgb(68, 117, 223);
    font-size: large;
    font-family: Arial, Helvetica, sans-serif;
-   color: rgb(255, 255, 255);
+   color: rgb(245, 237, 237);
    margin-right: 20px;
    border-radius: 10%;
 }
 .suiteffacebouton{
    display: flex;
    justify-content: center;
+   margin-bottom: 10px;
+   margin-left: 15px;
 }
 
 .container3{
@@ -217,9 +256,16 @@ border-radius: 10%;
    align-items: center;
    
 }
+.boutonclavier{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   
+}
 
 .containerbouton1{
-   margin-top: 20px;
+   
    margin-right: 10px;
    margin-bottom: 20px;
   

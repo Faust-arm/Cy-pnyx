@@ -17,7 +17,7 @@ let resulte = document.getElementById("suivant");
 
 
 // Bouton pour enlever et afficher le clavier
-   btcacher.addEventListener("click", () =>{
+  /* btcacher.addEventListener("click", () =>{
        if(getComputedStyle(divcacher).display != "none"){
            divcacher.style.display = "none";
         btcacher.innerHTML ="Afficher le clavier";
@@ -26,7 +26,7 @@ let resulte = document.getElementById("suivant");
                divcacher.style.display = "block";
                btcacher.innerHTML ="Enlever le clavier";
            }
-   })
+   }) */
 
 //Capture des bouton input des chiffres html dans js.
 let bz =document.getElementById("bz");
@@ -68,7 +68,7 @@ let boutons = [bz, b1, b2, b3, b4, b5, b6, b7, b8, b9];
     document.getElementById("n1").value = nombre1;
     document.getElementById("n2").value = nombre2;
     document.getElementById("vrairesulta").style.display = "none";
-    document.getElementById("monresulta").style.backgroundColor = "white";
+    document.getElementById("monresulta").style.backgroundColor = "rgb(43, 44, 44)";
     document.getElementById('monresulta').value = '';
     document.getElementById("vrairesulta").value = '';
 })
@@ -78,7 +78,7 @@ let boutons = [bz, b1, b2, b3, b4, b5, b6, b7, b8, b9];
 
 // Bputon pour effacer le contenue de "monresulta" et display none à "vrairesulta".
 buttoneffacer.addEventListener('click', () =>{
-    document.getElementById("monresulta").style.backgroundColor = "white";
+    document.getElementById("monresulta").style.backgroundColor = "rgb(43, 44, 44)";
     document.getElementById("monresulta").value = "";
     document.getElementById("vrairesulta").style.display = "none";
 }) 
@@ -97,9 +97,9 @@ sesmonresulta.addEventListener('change', (e) =>{
        // levrairesulta.style.backgroundColor = 'red';
     }
     if( parseInt(addi1) + parseInt(addi2) != recuperation  ){
-        document.getElementById("monresulta").style.backgroundColor = "red";
+        document.getElementById("monresulta").style.backgroundColor = "rgba(218, 31, 31,0.8)";
     }
-    else{ document.getElementById("vrairesulta").style.backgroundColor = "green";
+    else{ document.getElementById("vrairesulta").style.backgroundColor = "rgba(40, 189, 40, 0.7);";
      }
 })
 
@@ -119,7 +119,7 @@ let fermermenu = document.getElementsByClassName('btfermer')[0];
 
 menu.addEventListener("click", () => {
 
-    document.getElementById("myNav").style.width = "80%";
+    document.getElementById("myNav").style.width = "75%";
    
 })
    
