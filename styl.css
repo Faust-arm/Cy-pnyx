@@ -103,6 +103,10 @@ main{
    font-size: large;
 }
 
+.container4{
+   margin-right: 10px;
+}
+
 #n1, #n2{
    width: 50px;
    height:50px;
@@ -135,7 +139,7 @@ main{
    width: 175px;
    height:50px;
    text-align: center;
-   background-color: rgb(119, 250, 12,0.7);
+   background-color: rgba(69, 129, 20, 0.7);
    border-radius: 7em;
    
    font-size: 2em;
@@ -163,16 +167,17 @@ border: solid rgba(54, 207, 143,0.1) 2px;
 
 
 .egal{
-   font-size: 1.9em;
+   font-size: 2.5em;
    color: white;
    margin-right: 20px;
+   font-weight: bolder;
 }
 
 #b1,#b2,#b3,#b4,#bz{
-width: 70px;
-height: 70px;
+width: 80px;
+height: 55px;
 border-radius: 10%;
-margin: 7px;
+margin: 4px;
 background-color: rgb(43, 44, 44);
 font-size: 1.8em;
 color: rgb(245, 237, 237);
@@ -182,14 +187,14 @@ border: solid rgba(54, 207, 143,0.1) 2px;
 }
 
 #b6,#b7,#b8,#b9,#b5{
-   width: 70px;
-   height: 70px;
+   width: 80px;
+   height: 55px;
    background-color: rgb(43, 44, 44);
    font-size: 1.8em;
    color: rgb(245, 237, 237);
    font-family: Arial, Helvetica, sans-serif;
   
-margin: 7px;
+margin: 4px;
 font-weight: bolder;
 border-radius: 10%;
 border: solid rgba(54, 207, 143,0.1) 2px;
@@ -386,7 +391,7 @@ justify-content: center;
    height: 50px;
    font-size: 1.7em;
    text-align: center;
-   background-color: rgb(119, 250, 12);
+   background-color: rgba(69, 129, 20, 0.7);
    margin-bottom: 30px;
 }
 }

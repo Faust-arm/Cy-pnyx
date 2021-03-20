@@ -16,6 +16,7 @@ let resulte = document.getElementById("suivant");
    let divcacher = document.getElementsByClassName("diveffacerboutons")[0];
 
 
+   let nombrechiffreegal = 1;
 // Bouton pour enlever et afficher le clavier
   /* btcacher.addEventListener("click", () =>{
        if(getComputedStyle(divcacher).display != "none"){
@@ -62,8 +63,15 @@ let boutons = [bz, b1, b2, b3, b4, b5, b6, b7, b8, b9];
 
  button.addEventListener('click', () =>{
     button.innerHTML = "Recommencer";
-    let nombre1 = Math.round(Math.random()*99);
-    let nombre2 = Math.round(Math.random()*99);
+    let max = 0;
+    if(nombrechiffreegal === 1){
+        max = 9;
+    }
+    if(nombrechiffreegal === 2){
+        max = 99;
+    }
+    let nombre1 = Math.round(Math.random()*max);
+    let nombre2 = Math.round(Math.random()*max);
     document.getElementById("signe").value = addition;
     document.getElementById("n1").value = nombre1;
     document.getElementById("n2").value = nombre2;
@@ -73,13 +81,17 @@ let boutons = [bz, b1, b2, b3, b4, b5, b6, b7, b8, b9];
     document.getElementById("vrairesulta").value = '';
 })
 
+let addunchiffre = document.getElementsByClassName("addunchiffre")[0];
 
+addunchiffre.addEventListener('click', () =>{
+nombrechiffreegal = 1;
+})
   
 
 // Bputon pour effacer le contenue de "monresulta" et display none à "vrairesulta".
 buttoneffacer.addEventListener('click', () =>{
     document.getElementById("monresulta").style.backgroundColor = "rgb(43, 44, 44)";
-    document.getElementById("monresulta").value = "";
+    document.getElementById("monresulta").value =  document.getElementById("monresulta").value.slice(0,-1);
     document.getElementById("vrairesulta").style.display = "none";
 }) 
     
@@ -91,15 +103,17 @@ sesmonresulta.addEventListener('change', (e) =>{
     let recuperation = e.target.value;
     
     if( parseInt(addi1) + parseInt(addi2) == recuperation){  
- document.getElementById("monresulta").style.backgroundColor = "green";}
+ document.getElementById("monresulta").style.backgroundColor = "green";
+ 
+}
     else{  
         document.getElementById("vrairesulta").style.display = "block";
-       // levrairesulta.style.backgroundColor = 'red';
+       
     }
     if( parseInt(addi1) + parseInt(addi2) != recuperation  ){
         document.getElementById("monresulta").style.backgroundColor = "rgba(218, 31, 31,0.8)";
     }
-    else{ document.getElementById("vrairesulta").style.backgroundColor = "rgba(40, 189, 40, 0.7);";
+    else{ document.getElementById("vrairesulta").style.backgroundColor = "rgba(69, 129, 20, 0.7);";
      }
 })
 
