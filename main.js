@@ -16,6 +16,9 @@ let resulte = document.getElementById("suivant");
    let divcacher = document.getElementsByClassName("diveffacerboutons")[0];
 
 
+
+
+
    let nombrechiffreegal = 1;
 // Bouton pour enlever et afficher le clavier
   /* btcacher.addEventListener("click", () =>{
@@ -61,7 +64,7 @@ let boutons = [bz, b1, b2, b3, b4, b5, b6, b7, b8, b9];
  // generateur de nombres alléatoir sur les inputs n1 et n2 et addition de c'est nombres avec le boutton commencer.
  
 
- button.addEventListener('click', () =>{
+ /* button.addEventListener('click', () =>{
     button.innerHTML = "Recommencer";
     let max = 0;
     if(nombrechiffreegal === 1){
@@ -79,12 +82,40 @@ let boutons = [bz, b1, b2, b3, b4, b5, b6, b7, b8, b9];
     document.getElementById("monresulta").style.backgroundColor = "rgb(43, 44, 44)";
     document.getElementById('monresulta').value = '';
     document.getElementById("vrairesulta").value = '';
-})
+})*/
 
 let addunchiffre = document.getElementsByClassName("addunchiffre")[0];
+let adddeuxchiffre = document.getElementsByClassName("adddeuxchiffre")[0];
+let addtrioschiffre = document.getElementsByClassName("addtrioschiffre")[0];
 
 addunchiffre.addEventListener('click', () =>{
-nombrechiffreegal = 1;
+    let max = 9;
+nombrechiffreegal = 1;//truc de base
+let nombre1 = Math.round(Math.random()*max);
+    let nombre2 = Math.round(Math.random()*max);
+    document.getElementById("signe").value = addition;
+    document.getElementById("n1").value = nombre1;
+    document.getElementById("n2").value = nombre2;
+})
+
+adddeuxchiffre.addEventListener('click', () =>{
+    let max = 99;
+nombrechiffreegal = 1;//truc de base
+let nombre1 = Math.round(Math.random()*max);
+    let nombre2 = Math.round(Math.random()*max);
+    document.getElementById("signe").value = addition;
+    document.getElementById("n1").value = nombre1;
+    document.getElementById("n2").value = nombre2;
+})
+
+addtrioschiffre.addEventListener('click', () =>{
+    let max = 999;
+nombrechiffreegal = 1;//truc de base
+let nombre1 = Math.round(Math.random()*max);
+    let nombre2 = Math.round(Math.random()*max);
+    document.getElementById("signe").value = addition;
+    document.getElementById("n1").value = nombre1;
+    document.getElementById("n2").value = nombre2;
 })
   
 
@@ -95,30 +126,42 @@ buttoneffacer.addEventListener('click', () =>{
     document.getElementById("vrairesulta").style.display = "none";
 }) 
     
-// solution du resulta par rapport à celui de l'utilisateur, green pour vrai, red pour faux.
-sesmonresulta.addEventListener('change', (e) =>{
+// Détection de "monresulta" pour changer la valeur de n1 et n2 si "monresulta" et égal n1 +n2. 
+sesmonresulta.addEventListener('keyup', (e) =>{
 
+    
     let addi1 = document.getElementById("n1").value ;
     let addi2 = document.getElementById("n2").value;
     let recuperation = e.target.value;
-    
-    if( parseInt(addi1) + parseInt(addi2) == recuperation){  
- document.getElementById("monresulta").style.backgroundColor = "green";
- 
+    let sommeaddi = parseInt(addi1) + parseInt(addi2);
+  // Si mon resultat est correct alors mettre de nouveaux nombre aléatoir sur n1 et n2
+if( sommeaddi == recuperation){  
+
+    let nombre1 = Math.round(Math.random()*99);
+    let nombre2 = Math.round(Math.random()*99);
+document.getElementById("n1").value = nombre1;
+document.getElementById("n2").value = nombre2;
+document.getElementById('monresulta').value = '';
+
+
 }
-    else{  
+
+
+ /*   else{  
         document.getElementById("vrairesulta").style.display = "block";
        
     }
     if( parseInt(addi1) + parseInt(addi2) != recuperation  ){
         document.getElementById("monresulta").style.backgroundColor = "rgba(218, 31, 31,0.8)";
+
+       
     }
     else{ document.getElementById("vrairesulta").style.backgroundColor = "rgba(69, 129, 20, 0.7);";
-     }
+     }*/
 })
 
 // additions des nombres sur les inputs n1 et n2 avec résulta en appuiant sur le boutton resulte.
-resulte.addEventListener('click', () =>{
+/*resulte.addEventListener('click', () =>{
     let evt = document.createEvent("HTMLEvents");
      evt.initEvent("change", false, true);
     document.getElementById('monresulta').dispatchEvent(evt);
@@ -126,7 +169,7 @@ resulte.addEventListener('click', () =>{
     let addi2 = document.getElementById("n2").value;
     let sommeaddi = parseInt(addi1) + parseInt(addi2);
     document.getElementById("vrairesulta").value = sommeaddi;
-})
+})*/
 
 let menu = document.getElementsByClassName('containairebardemenu')[0];
 let fermermenu = document.getElementsByClassName('btfermer')[0];
@@ -142,10 +185,19 @@ fermermenu.addEventListener("click", () => {
     document.getElementById("myNav").style.width = "0%";
    
 })
+let lesclass = document.getElementsByClassName("overlay-content")[0];
 
+lesclass.addEventListener("click", () => {
 
+    document.getElementById("myNav").style.width = "0%";
+   
+})
 
+document.querySelector("main").addEventListener("click", () => {
 
+    document.getElementById("myNav").style.width = "0%";
+   
+})
 
 
 
