@@ -54,6 +54,21 @@ let boutons = [bz, b1, b2, b3, b4, b5, b6, b7, b8, b9];
 
      bouton.addEventListener('click', () =>{ 
           sesmonresulta.value += bouton.value; 
+          let addi1 = document.getElementById("n1").value ;
+          let addi2 = document.getElementById("n2").value;
+          let recuperation = sesmonresulta.value;
+          let sommeaddi = parseInt(addi1) + parseInt(addi2);
+        // Si mon resultat est correct alors mettre de nouveaux nombre aléatoir sur n1 et n2
+      if( sommeaddi == recuperation){  
+      
+          let nombre1 = Math.round(Math.random()*9);
+          let nombre2 = Math.round(Math.random()*9);
+      document.getElementById("n1").value = nombre1;
+      document.getElementById("n2").value = nombre2;
+      document.getElementById('monresulta').value = '';
+      
+      
+      }
      })
  })
 
@@ -137,8 +152,8 @@ sesmonresulta.addEventListener('keyup', (e) =>{
   // Si mon resultat est correct alors mettre de nouveaux nombre aléatoir sur n1 et n2
 if( sommeaddi == recuperation){  
 
-    let nombre1 = Math.round(Math.random()*99);
-    let nombre2 = Math.round(Math.random()*99);
+    let nombre1 = Math.round(Math.random()*9);
+    let nombre2 = Math.round(Math.random()*9);
 document.getElementById("n1").value = nombre1;
 document.getElementById("n2").value = nombre2;
 document.getElementById('monresulta').value = '';
