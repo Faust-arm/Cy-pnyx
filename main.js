@@ -32,6 +32,9 @@ let resulte = document.getElementById("suivant");
            }
    }) */
 
+
+   
+
 //Capture des bouton input des chiffres html dans js.
 let bz =document.getElementById("bz");
 let b1 =document.getElementById("b1");
